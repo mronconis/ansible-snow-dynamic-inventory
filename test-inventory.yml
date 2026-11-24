@@ -1,0 +1,12 @@
+---
+- name: Test ServiceNow Dynamic Inventory 
+  hosts: all
+  gather_facts: false
+  vars:
+    ansible_host: "{{ ip_address }}"
+    ansible_user: foo
+    ansible_password: bar
+  tasks:
+    - name: Ping host
+      ansible.builtin.ping:
+      
